@@ -1,5 +1,5 @@
 # learngit
-亚马逊评论数据集来练习LDA
+[亚马逊评论数据集来练习lda](https://kldavenport.com/topic-modeling-amazon-reviews/#loading-our-data ) 
 
-[Topic Modeling Amazon Product Reviews]: https://kldavenport.com/topic-modeling-amazon-reviews/#loading-our-data
+
 
