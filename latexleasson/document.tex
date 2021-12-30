@@ -1,0 +1,238 @@
+\documentclass{ctexart}
+	% The document class with options:ctexbook,ctexreport,letter
+\usepackage[T1]{fontenc}
+%\usepackage[fontset=mac]{ctex}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{natbib}
+\newcommand{\eat}{我喜欢吃\heiti 肉}
+\newcommand{\play}[2]{#1 喜欢玩 #2 \par}
+\bibliographystyle{plainnat}%plain unsrt alpha abbrv
+% A comment in the preamble
+\author{meng~Xianglong\footnote{mxl} \and D.~Nobacon\footnote{MIT} \and Nan.Y\footnote{TJU}}
+\title{\kaishu 杂谈勾股定理，\eat}
+\date{\today}
+%设置全局格式，内容与格式分离
+\ctexset {		
+	section = {
+		name = {第,章},
+		number = \chinese{section},
+},
+subsection = {
+name = {,、}
+%number = \arabic{subsection},
+}
+ }
+%\newcommand\degree{^\circ}
+\begin{document}
+\maketitle
+\tableofcontents
+
+	\section{引言}
+	\section{实验方案}l
+	\subsection{实验方案一}
+	%\subsubsection{1.1}
+	\play{mxl}{gta}
+	勾股定理可以用现代语言表述如下：
+	
+	直角三角形斜边的平方等于两腰的平方和
+	
+	可以用符号语言表述为：设直角三角形$ABC$，其中 $\angle C=90^\circ$,则有：
+	\begin{equation}
+		AB^2=BC^2+AC^2
+	\end{equation}
+	
+	%字体族设置（罗马字体、无衬线字体、打字机字体）
+	\textrm{Roman Famliy} \textsf{Sans Serif Family} \texttt{Typewriter Famliy}
+	
+	\rmfamily Roman Famliy {\sffamily Sans Serif Family} {\ttfamily Typewriter Famliy}
+	
+	%字体系列设置（粗细，宽度）
+	\textmd{Medium Series}  \textbf{Boldface Series}%中等，加粗
+	
+	{\mdseries Medium Series} {\bfseries Boldface Series}
+	
+	%形状设置 直立文本，意大利斜体，伪斜体，小型大写
+	{\upshape Upright Shape} {\itshape Italic Shape}  {\slshape Slanted Shape} {\scshape Small Caps Shape}
+	
+	中文字体的字体型号 {\heiti 黑体}$f^2(x)$
+	
+	\zihao{5} 你好
+%中文中空格被忽略
+%禁止使用中文全角空格，用\quad，\ ,代替
+%特殊字符	
+	\section{实验结果}
+	As we konw television has been very popular with us.
+	It is true that TV has some advantages. It makes our daily life more colourful.
+	We can see movie at any time instead of going out.
+	Just like a coin,everything has two sides.It also has some disadvantages.
+	It makes us waste our time. 
+	
+	a \hfill b
+	
+具体的图片交叉引用使用了图\ref{brain}
+
+
+
+	
+     \LaTeX{}
+\section{实验结论}
+	` ' `` '' ``你好''
+	
+	- -- ---	
+
+\subsection{结论一}
+当然，在\LaTeX 中也可以使用如表\ref{exampletable}类型的表格
+%表格
+\begin{table}[htbp]%设置浮动体
+	\centering
+	\caption{示例}\label{exampletable}
+	\begin{tabular}{|c|c|c|c|p{1.5cm}|}%{}列格式说明,p指定列宽度
+		\hline
+		姓名 & 语文 & 数学 & 外语 & 备注 \\
+		\hline
+		张三 & 87 & 100 & 93 & 优秀 \\
+		\hline
+	\end{tabular}
+\end{table}
+\section{希腊字母}
+$\alpha$ $\theta$ $\uparrow$ $\beta$
+
+$\sqrt[3]{x^2_{z}-y}$
+
+$\frac{\sqrt[3]{x^2_{z}-y}}{\sqrt[3]{x^2_{m}-y}}$
+\subsection{带编号可以交叉引用的公式}
+\begin{equation}\label{1}
+	\frac{\sqrt[3]{x^2_{z}-y}}{\sqrt[3]{x^2_{m}-y}}
+\end{equation}
+
+\subsection{不带编号可以交叉引用的公式}
+\begin{equation*}\label{2}
+	\sqrt[3]{x^2_{z}-y}
+\end{equation*}
+
+如公式\ref{1}是带编号的，公式\ref{2}是不带编号的
+
+\section{矩阵}
+%省略号可以用 \dots,\vdots,\ddots实现
+$\begin{array}{cc}
+	0 & 1 \\
+	2 & 3
+\end{array}$
+
+$ \begin{matrix}
+0 & 1 \\
+2 & 3
+\end{matrix}
+ $\qquad
+$$ \begin{pmatrix}
+0 & \vdots \\
+2 & 3
+\end{pmatrix}
+ $$
+ $$ \begin{array}{*{20}{c}}
+ 1&1& \cdots &1\\
+ 2&3&3&2\\
+ \vdots & \ddots &1& \vdots \\
+ 1&2& \cdots &3
+ \end{array} $$
+ $$ \left[ {\begin{array}{*{20}{c}}
+ 	1&1& \cdots &1\\
+ 	2&3&3&2\\
+ 	\vdots & \ddots &1& \vdots \\
+ 	1&2& \cdots &3
+ 	\end{array}} \right] $$
+ $$ \left| {\begin{array}{*{20}{c}}
+ 	1&1& \cdots &1\\
+ 	2&3&3&2\\
+ 	\vdots & \ddots &1& \vdots \\
+ 	1&2& \cdots &3
+ 	\end{array}} \right| $$
+ $$ \left( {\begin{array}{*{20}{c}}
+ 	{{a_{11}}}&{{a_{12}}}\\
+ 	{{a_{21}}}&{{a_{22}}}
+ 	\end{array}} \right)_{n \times n} $$
+$$\begin{bmatrix}
+	1 & 2 \\
+	3 & 4
+\end{bmatrix}$$
+
+$$\begin{Bmatrix}
+1 & 2 \\
+3 & 4
+\end{Bmatrix}$$
+
+ $$\begin{vmatrix}
+ 	12 & 2 \\
+ 	3 & 4
+ \end{vmatrix}$$
+
+%三角矩阵
+\[\begin{pmatrix}
+a_{11} & a_{12}&\cdots&a_{1n} \\
+&a_{22}& \cdots &a_{2n} \\
+&     & \ddots & \vdots\\
+\multicolumn{2}{c}{\raisebox{1.3ex}[0pt]{\huge 0}}
+&    &a_{nn}
+\end{pmatrix}\]
+
+%行内小矩阵
+复数 $z = f(x,y)$也可以用矩阵
+\begin{math}
+\left(
+\begin{smallmatrix}
+x & -y \\ y & x
+\end{smallmatrix}
+\right)	
+\end{math}
+来表示
+
+\section{公式分行}
+%gather和gather*命令
+\begin{gather}
+	a+b = b+a\\
+	ab ba\\
+	3 \times 5
+\end{gather}
+
+%align 和 align*环境（用&进行对齐）
+\begin{align}
+	x &= t+ \cos t +1 \\
+	y &= 2\sin t
+\end{align}
+\begin{align*}
+x &= t& x &= \cos t &x &= t \\
+y &= 2t & y &=\sin(t+1) &y &=\sin x
+\end{align*}
+
+\[x = \left\{ \begin{array}{l}
+5,\quad if \quad x = y\\
+6,\quad if\quad x > y
+\end{array} \right.\]
+
+\begin{align}
+x &= \left\{ \begin{array}{l}
+5,\quad if \quad x = y\\
+6,\quad if\quad x > y
+\end{array} \right. \\
+D(x) &= \begin{cases}
+1,& \text{如果 }x \in \mathbb{Q};\\
+0,& \text{如果 }x \in \mathbb{R}\setminus\mathbb{Q}
+\end{cases}
+\end{align}
+
+%cases环境
+\begin{equation}
+	D(x) = \begin{cases}
+	1,& \text{如果 }x \in \mathbb{Q};\\
+	0,& \text{如果 }x \in \mathbb{R}\setminus\mathbb{Q}
+	\end{cases}
+\end{equation}
+\section{参考文献使用}
+这是一个参考文献引用\cite{dosovitskiy2020an}, 这是另外一个引用\cite{junnan2020prototypical},这是第三个引用\cite{liu_representation_2020}
+这是来自导出的条目的引用\cite{choromanski2020rethinking}
+\cite{chollet2015keras}
+\nocite{*}%显示未引用参考文献
+\bibliography{test,test1}
+\end{document}
